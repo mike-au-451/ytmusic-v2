@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8'>
+	<title>Index</title>
+</head>
+<body>
+	<h1>Index</h1>
+	<hr>
+	<form method='POST'>
+		<select name='plid' >
+		{% for plid in playlist %}
+			{% if plid == select %}
+				<option value='{{ plid }}' selected='selected'>{{ playlist[plid]["title"] }}</option>
+			{% else %}
+				<option value='{{ plid }}'>{{ playlist[plid]["title"] }}</option>
+			{% endif %}
+		{% endfor %}
+		</select>
+		<input type='submit' value='See playlist' />
+		<div id='tracklist'>
+		{% if tracklist != {} %}
+			<table>
+			{% for tr in tracklist %}
+				<tr>
+					<td>{{ tr["title"] }}</td><td>{{ tr["artists"] }}</td>
+				</tr>
+			{% endfor %}
+			</table>
+		{% endif %}
+		</div>
+	</form>
+</body>
+</html>

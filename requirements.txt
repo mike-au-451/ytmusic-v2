@@ -1,0 +1,7 @@
+flask
+jinja2
+python-dotenv
+ytmusicapi
+
+gunicorn
+
