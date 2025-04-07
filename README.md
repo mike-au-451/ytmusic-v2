@@ -13,8 +13,15 @@ git clone git@github.com:mike-au-451/ytmusic-v2.git
 cd ytmusic-v2
 python -m venv venv
 source venv/bin/activate
-pip install -r requirements.txt 
+pip install -r requirements.txt
 ```
+
+Create a dot-env and update the client ID and client secret as required:
+```
+cp dot.env .env
+vi .env
+```
+The client details can be obtained from the Google cloud console under API's & services Credentials.
 
 Set up and authorize an API key in Google cloud.
 
